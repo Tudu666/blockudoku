@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
    
@@ -29,7 +30,10 @@ const Login = () => {
           required
         />
         <button type="submit">Login</button>
+        
       </form>
+      <a href="./Register">Register</a>
+
     </div>
   );
 };

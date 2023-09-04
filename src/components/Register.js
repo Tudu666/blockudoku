@@ -22,14 +22,29 @@ const Register = () => {
           required
         />
         <input
+          type="text"
+          placeholder="User Name"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <input
+          type="password"
+          placeholder="Re-type Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Register</button>
       </form>
+      <a href="./">Login</a>
     </div>
   );
 };
